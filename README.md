@@ -3,7 +3,7 @@
 </p>
 
 ## Introduction
-Dentify is a modern dental management app that helps dentists keep all patient information in one intuitive place. The users can: 
+Dentify is a modern dental management app that helps dentists keep all patient information in one intuitive place. The users can: <br />
 • Register and manage patient profiles <br />
 • Register appointments and procedures <br />
 • Access daily, weekly, monthly or yearly overviews <br />
