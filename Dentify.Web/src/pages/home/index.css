@@ -1,0 +1,7 @@
+.uk-button-primary {
+  background-color: #67688c;
+}
+.uk-button-primary:hover,
+.uk-button-primary:active {
+  background-color: #f0f0f4;
+}

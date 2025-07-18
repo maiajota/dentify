@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="uk-grid-collapse uk-width-1-1 uk-height-viewport" uk-grid>
+    <div class="uk-visible@m uk-flex uk-flex-center uk-flex-middle uk-width-1-2@m">
+        <div class="logo"></div>
+    </div>
+    <div class="uk-card uk-card-default uk-padding uk-flex uk-flex-middle uk-flex-center uk-height-viewport uk-width-1-2@m">
+        <form class="uk-grid-collapse uk-flex-column uk-flex-middle" uk-grid>
+            <div class="uk-hidden@m uk-flex uk-flex-center uk-flex-middle">
+                <div class="logo"></div>
+            </div>
+            <div class="uk-margin-bottom uk-width-medium">
+                <div class="uk-form-controls uk-width-1-1">
+                    <label class="uk-form-label">
+                        E-mail
+                        <input class="uk-input" type="text" placeholder="E-mail">
+                    </label>
+                </div>
+            </div>
+            <div class="uk-margin-bottom uk-width-medium">
+                <div class="uk-form-controls">
+                    <label class="uk-form-label">
+                        Senha
+                        <input class="uk-input" type="password" placeholder="Senha">
+                    </label>
+                </div>
+            </div>
+            <button class="uk-button uk-button-primary uk-width-medium uk-margin-bottom">Entrar</button>
+            <button type="button" class="uk-button uk-button-default uk-width-medium">Cadastrar</button>
+        </form>
+    </div>
+</div>
+
+<script src="~/dist/login.entry.js" asp-append-version="true"></script>
+<script>
+    
+</script>

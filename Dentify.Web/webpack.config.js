@@ -27,7 +27,8 @@ module.exports = {
             ],
             runtime: "runtime"
         },
-        home: { import: './src/pages/home/index.ts', dependOn: ['izitoast', 'jquery']}
+        home: { import: './src/pages/home/index.ts', dependOn: ['izitoast', 'jquery']},
+        login: { import: './src/pages/login/index.ts', dependOn: ['izitoast', 'jquery']}
     },
     module: {
         rules: [
