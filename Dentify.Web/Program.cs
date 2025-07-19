@@ -4,7 +4,7 @@ using Dentify.Web.Configurations;
 using Dentify.Web.Configurations.Middlewares;
 
 var cultureInfo = new CultureInfo("pt-BR");
-cultureInfo.DateTimeFormat.AbbreviatedMonthNames = new[] { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez", "" };
+cultureInfo.DateTimeFormat.AbbreviatedMonthNames = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez", ""];
 cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
 CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
 CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
@@ -25,6 +25,8 @@ var app = builder.Build();
 
 using var scope = app.Services.CreateScope();
 
+Configuration.UpdateDbScripts(scope);
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -42,3 +44,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
