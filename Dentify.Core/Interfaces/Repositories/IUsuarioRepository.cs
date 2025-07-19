@@ -1,4 +1,3 @@
-using Dentify.Core.Interfaces.Repositories.Base;
 using Dentify.Core.Models;
 
 namespace Dentify.Core.Interfaces.Repositories;
