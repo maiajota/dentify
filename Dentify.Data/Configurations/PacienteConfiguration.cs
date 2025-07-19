@@ -22,13 +22,5 @@ public class PacienteConfiguration : IEntityTypeConfiguration<Paciente>
         builder.Property(x => x.Bairro).HasColumnName("bairro").HasMaxLength(30);
         builder.Property(x => x.Numero).HasColumnName("numero").HasMaxLength(5);
         builder.Property(x => x.Telefone).HasColumnName("telefone").IsRequired().HasMaxLength(11);
-
-        builder.HasMany(pa => pa.UsuariosPacientes)
-            .WithOne(up => up.Paciente)
-            .HasForeignKey(up => up.IdPaciente);
-
-        builder.HasMany(pa => pa.Procedimentos)
-            .WithOne(p => p.Paciente)
-            .HasForeignKey(p => p.PacienteId);
     }
 }

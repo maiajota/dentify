@@ -17,9 +17,5 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         builder.Property(x => x.Nome).HasColumnName("nome").IsRequired().HasMaxLength(100);
         builder.Property(x => x.Email).HasColumnName("email").IsRequired().HasMaxLength(120);
         builder.Property(x => x.Senha).HasColumnName("senha").IsRequired().HasMaxLength(64);
-
-        builder.HasMany(u => u.UsuariosPacientes)
-            .WithOne(up => up.Usuario)
-            .HasForeignKey(up => up.IdUsuario);
     }
 }

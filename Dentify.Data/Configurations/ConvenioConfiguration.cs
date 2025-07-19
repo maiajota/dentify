@@ -15,9 +15,5 @@ public class ConvenioConfiguration : IEntityTypeConfiguration<Convenio>
 
         builder.Property(x => x.Id).HasColumnName("id").IsRequired().ValueGeneratedOnAdd();
         builder.Property(x => x.Nome).HasColumnName("nome").IsRequired().HasMaxLength(50);
-
-        builder.HasMany(c => c.Procedimentos)
-            .WithOne(p => p.Convenio)
-            .HasForeignKey(p => p.ConvenioId);
     }
 }

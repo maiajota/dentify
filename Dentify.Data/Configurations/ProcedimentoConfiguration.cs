@@ -26,9 +26,5 @@ public class ProcedimentoConfiguration : IEntityTypeConfiguration<Procedimento>
         builder.HasOne(p => p.Convenio)
             .WithMany(c => c.Procedimentos)
             .HasForeignKey(p => p.ConvenioId);
-
-        builder.HasMany(p => p.ProcedimentoDente)
-            .WithOne(pd => pd.Procedimento)
-            .HasForeignKey(pd => pd.ProcedimentoId);
     }
 }
